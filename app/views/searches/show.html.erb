@@ -1,0 +1,7 @@
+<h1>Matching entries</h1>
+
+<% if @search.entries.present? %>
+  <%= render @search.entries %>
+<% else %>
+  We couldn't find any entries that include '<%= @search.term %>' :(.
+<% end %>

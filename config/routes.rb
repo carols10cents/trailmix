@@ -12,5 +12,8 @@ Rails.application.routes.draw do
   resources :imports, only: [:new, :create]
   resource :settings, only: [:edit, :update]
 
+  get "/search", to: "searches#new", as: :search
+  post "/search", to: "searches#create", as: :searches
+
   root to: "dashboard#index", as: "dashboard"
 end
