@@ -1,5 +1,5 @@
 <p class="lead">
-  <%= formatted_datestamp_for(entry) %>
+  <%= l(entry.date, format: :month_day_year) %>
 </p>
 
 <%= simple_format(highlight(entry.body, @search.term), {}, sanitize: false) %>
